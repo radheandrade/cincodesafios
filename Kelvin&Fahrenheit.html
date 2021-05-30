@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="celcius" type="text">
+    <button id="boton">Resultado</button>
+
+    <h3 id="kelvin"> Kelvin:</h3>
+    <h3 id="fahrenheit">Fahrenheit:</h3>
+
+    <script>
+
+        var input1 = document.getElementById("celcius")
+        var boton = document.getElementById("boton")
+
+        function kelvin(){
+            var celcius = +input1.value;
+            var kelvin = celcius + 273.15;
+            return kelvin;
+        }
+
+        function fahrenheit(){
+            var celcius = +input1.value;
+            var fahrenheit = (celcius*9/5)+32;
+            return fahrenheit;
+        }
+        boton.addEventListener("click", function(){
+
+            document.getElementById("kelvin").innerHTML= `Kelvin: ${kelvin()}`
+            document.getElementById("fahrenheit").innerHTML= `Fahrenheit: ${fahrenheit()}`
+
+        })
+    </script>
+</body>
+</html>

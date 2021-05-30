@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input id="num1" type="text">
+    <input id="num2" type="text">
+    <button id="boton" >solucion</button>
+
+
+
+    <h3 id="suma">Suma:</h3>
+    <h3 id="resta">Resta:</h3>
+    <h3 id="multiplicacion">Multiplicacion:</h3>
+    <h3 id="division">Division:</h3>
+    <h3 id="modulo">Modulo:</h3>
+
+
+
+    <script>
+
+        var input1 = document.getElementById("num1")
+        var input2 = document.getElementById("num2")
+        var boton = document.getElementById("boton")
+
+
+
+
+
+        boton.addEventListener("click", function(){
+            var numero1 = +input1.value
+            var numero2 = +input2.value
+
+            var suma = numero1+numero2;
+            var resta = numero1-numero2;
+            var multiplicacion = numero1*numero2;
+            var division = numero1/numero2;
+            var modulo = numero1%numero2;
+
+            document.getElementById("suma").innerHTML= `Suma: ${suma}`
+            document.getElementById("resta").innerHTML = `Resta: ${resta}`
+            document.getElementById("multiplicacion").innerHTML = `Multiplicacion: ${multiplicacion}`
+            document.getElementById("division").innerHTML = `Division: ${division}`
+            document.getElementById("modulo").innerHTML = `Modulo: ${modulo}`
+        })
+    </script>
+</body>
+</html>

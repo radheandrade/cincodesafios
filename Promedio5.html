@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="input1" type="text">
+    <input id="input2" type="text">
+    <input id="input3" type="text">
+    <input id="input4" type="text">
+    <input id="input5" type="text">
+
+    <button id="boton">Resultado</button>
+
+    <h3 id="suma">Suma</h3>
+    <h3 id="promedio">Promedio</h3>
+
+    <script>
+
+        // Funciones del boton con respecto a los 5 datos
+        
+        boton.addEventListener("click", function(){
+
+            // valores
+
+            var numero1 = +input1.value;
+            var numero2 = +input2.value;
+            var numero3 = +input3.value;
+            var numero4 = +input4.value;
+            var numero5 = +input5.value;
+
+            var boton = document.getElementById("boton")
+
+            // Creacion de la suma
+            var suma = numero1+numero2+numero3+numero4+numero5
+            // Creacion del promedio
+            var promedio = suma/5
+
+                // Imprimiendo los resultados
+            document.getElementById("suma").innerHTML=`Suma:${suma}`
+            document.getElementById("promedio").innerHTML=`Promedio:${promedio}`
+        
+        })
+    </script>
+</body>
+</html>

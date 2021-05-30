@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+    <input id="DiasDelAño" type="text">
+    <button id="boton">Resultado</button>
+
+    <h3 id="dias">Dias:</h3>
+    <h3 id="semanas">Semanas:</h3>
+    <h3 id="años">Años:</h3>
+
+  <script>
+
+    var input1 = document.getElementById("DiasDelAño")
+    var boton = document.getElementById("boton")
+
+
+    boton.addEventListener("click", function(){
+      var dias = +input1.value
+
+      var años = Math.floor(dias/365)
+      dias = dias%365;
+      var semanas = Math.floor(dias/7)
+      dias = dias%7;
+
+      document.getElementById("dias").innerHTML=`Dias:${dias}`
+      document.getElementById("semanas").innerHTML=`Semanas:${semanas}`
+      document.getElementById("años").innerHTML=`Años:${años}`
+    })
+
+  </script>
+</body>
+</html>
